@@ -1,3 +1,33 @@
+let addMessage = document.querySelector('.message'),
+  addButton = document.querySelector('.add'),
+  todo = document.querySelector('.todo');
+
+let todoList = [];
+
+addButton.addEventListener('click', function () {
+
+  let newTodo = {
+    todo: addMessage.value,
+    checked: false,
+    important: false
+  };
+
+  todoList.push(newTodo);
+  displayMessage();
+
+});
+
+function displayMessage() {
+
+  todoList.forEach(function (item, i) {
+    let displayMessage = `
+    <li>
+    <input type='checkbox' id=
+    </li>
+ `;
+  })
+};
+
 // let addMessage = document.querySelector('.message');
 // let addButton = document.querySelector('.add');
 // let removeButton = document.querySelector('.remove');
