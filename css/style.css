@@ -1,6 +1,50 @@
 body {
-  background-color: aquamarine;
+    background-color: #dce6cb;
+    color: #26334d;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
 }
+
 text {
-  color: black;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    display: flex;
+}
+
+.task {
+    max-width: 350px;
+    margin: auto;
+}
+
+.create_new_todo {
+    text-align: center;
+    display: flex;
+}
+
+.message {
+    max-width: 300px;
+    size: 25px;
+    align-content: center;
+    text-align: center;
+    margin: 2px;
+}
+
+.task_name {
+    size: 25px;
+    align-content: center;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
 }
