@@ -36,15 +36,11 @@ text {
 
 .message {
     max-width: 300px;
-    size: 25px;
-    align-content: center;
-    text-align: center;
-    margin: 2px;
 }
 
 .task_name {
     size: 25px;
     align-content: center;
     text-align: center;
-    margin: 5px 5px 5px 5px;
+    margin: 5 5 5 5px;
 }
