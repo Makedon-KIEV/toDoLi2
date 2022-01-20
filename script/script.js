@@ -1,6 +1,7 @@
 let addMessage = document.querySelector('.message'),
     addButton = document.querySelector('.add'),
-    todo = document.querySelector('.todo');
+    todo = document.querySelector('.todo'),
+    removeButton = document.querySelector('.remove');
 
 let todoList = [];
 
@@ -20,6 +21,7 @@ addButton.addEventListener('click', function() {
     todoList.push(newTodo);
     displayMessage();
     localStorage.setItem('todo', JSON.stringify(todoList));
+    addMessage.value = '';
 
 });
 
@@ -50,22 +52,42 @@ todo.addEventListener('change', function(event) {
 });
 
 todo.addEventListener('contextmenu', function(event) {
-        event.preventDefault();
-        todoList.forEach(function(item) {
-            if (item.todo === event.target.innerHTML) {
+    event.preventDefault();
+    todoList.forEach(function(item, i) {
+        if (item.todo === event.target.innerHTML) {
+            if (event.controlKey || event.shiftKay) {
+                todoList.splice(i, 1);
+            } else {
                 item.important = !item.important;
-                displayMessages();
-                localStorage.setItem('todo', JSON.stringify(todoList));
             }
-        })
-
+            displayMessages();
+            localStorage.setItem('todo', JSON.stringify(todoList));
+        }
     })
-    // let addMessage = document.querySelector('.message');
-    // let addButton = document.querySelector('.add');
-    // let removeButton = document.querySelector('.remove');
-    // let doneButton = document.querySelector('.done');
-    // let clearButton = document.querySelector('.clear');
-    // let todo = document.querySelector('.todo');
+
+})
+
+// Button delete
+// removeButton.addEventListener('click', function() {
+
+//     let newTodo = {
+//         todo: addMessage.value,
+//         checked: false,
+//         important: false
+//     };
+
+//     todoList.splice(newTodo);
+//     displayMessage();
+//     localStorage.setItem('todo', JSON.stringify(todoList));
+
+// });
+
+// let addMessage = document.querySelector('.message');
+// let addButton = document.querySelector('.add');
+// let removeButton = document.querySelector('.remove');
+// let doneButton = document.querySelector('.done');
+// let clearButton = document.querySelector('.clear');
+// let todo = document.querySelector('.todo');
 
 // let todoList = [];
 
