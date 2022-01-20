@@ -13,7 +13,7 @@ addButton.addEventListener('click', function() {
 
     let newTodo = {
         todo: addMessage.value,
-        checked: true,
+        checked: false,
         important: false
     };
 
