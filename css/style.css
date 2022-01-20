@@ -27,6 +27,7 @@ text {
 .task {
     max-width: 350px;
     margin: auto;
+    background-color: #c0cfa6;
 }
 
 .create_new_todo {
@@ -40,6 +41,7 @@ text {
     align-content: center;
     text-align: center;
     margin: 2px;
+    color: rgb(150, 83, 96);
 }
 
 .task_name {

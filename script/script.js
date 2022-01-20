@@ -30,7 +30,7 @@ function displayMessage() {
     todoList.forEach(function(item, i) {
         displayMessage += `
     <li>
-    <input type='checkbox' id='item_${i}' ${item.checked ? 'checked':'000'}>
+    <input type='checkbox' id='item_${i}' ${item.checked ? 'checked':''}>
     <label for='item_${i}' class="${item.important ? 'important' : ''}">${item.todo}</label>
     </li>
     `;
@@ -67,6 +67,12 @@ todo.addEventListener('contextmenu', function(event) {
 
 })
 
+//Button remove
+removeButton.addEventListener('click', function() {
+    localStorage.setItem('todo', JSON.stringify(todoList));
+    addMessage.value = '';
+});
+
 // Button delete
 // removeButton.addEventListener('click', function() {
 
@@ -81,6 +87,9 @@ todo.addEventListener('contextmenu', function(event) {
 //     localStorage.setItem('todo', JSON.stringify(todoList));
 
 // });
+
+
+
 
 // let addMessage = document.querySelector('.message');
 // let addButton = document.querySelector('.add');
@@ -107,22 +116,3 @@ todo.addEventListener('contextmenu', function(event) {
 // displayMessages();
 // localStorage.setItem('todo', JSON.stringify(todoList));
 // });
-
-// function displayMessages() {
-//   let displayMessage = '';
-//   if(todoList.length === 0) todo.innerHTML = '';
-//   todoList.forEach(function(item, index) {
-//     displayMessage += `
-//     <li>
-//       <input type='checkbox' id='item_${index}' ${item.checked ? 'checked' : ''}>
-//       <label for='item_${index}' class="${item.important ? 'important' : ''}">${item.todo}</label>
-//     </li>
-//     `;
-//     todo.innerHTML = displayMessage;
-//   });
-// }
-
-// clearButton.addEventListener('click', function(event) {
-//    todoList = [];
-//    displayMessages();
-// localStorage.setItem('todo', JSON.stringify(todoList));
