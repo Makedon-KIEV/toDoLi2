@@ -54,3 +54,13 @@ li {
     text-align: center;
     margin: 5px 5px 5px 5px;
 }
+
+.create_new_todo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(216, 195, 141);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}

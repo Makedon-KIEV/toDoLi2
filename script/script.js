@@ -11,6 +11,7 @@ if (localStorage.getItem('todo')) {
 }
 
 addButton.addEventListener('click', function() {
+    if (!addMessage.value) return;
 
     let newTodo = {
         todo: addMessage.value,
