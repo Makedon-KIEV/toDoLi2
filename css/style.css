@@ -11,6 +11,10 @@ text {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+li {
+    list-style: none;
+}
+
 @media (max-width: 700px) {
     .info {
         text-align: center;
