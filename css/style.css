@@ -15,28 +15,45 @@ li {
     list-style: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1240px) {
     .info {
+        width: 450px;
         text-align: center;
         display: block;
+        border-radius: 5px;
+        margin-top: 118px;
+        margin-bottom: 34px;
     }
 }
 
 .container {
-    max-width: 750px;
-    margin: auto;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .task {
-    max-width: 350px;
-    margin: auto;
-    background-color: #c0cfa6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36.59vw;
+    background: radial-gradient(39.83% 39.76% at 36.3% 32.92%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.776) 48.96%, rgba(255, 255, 255, 0.68) 100%);
+    border: 0.08vw solid #fff;
+    box-sizing: border-box;
+    border-radius: 1.63vw;
+    margin-top: 9.59vw;
+    margin-bottom: 2.76vw;
 }
 
 .create_new_todo {
     text-align: center;
-    display: flex;
+    display: inline-block;
+    width: 98%;
+    height: 100%;
+    padding: 1%;
 }
 
 .message {
@@ -63,4 +80,16 @@ li {
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
+}
+
+.text {
+    display: flex;
+    height: 52px;
+    width: 100%;
+    padding: 5px 5px;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1%;
 }
